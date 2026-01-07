@@ -101,6 +101,10 @@
         vertical-align: middle;
     }
 
+    .text-muted {
+        color: #23b8ff !important;
+    }
+
     @@media (min-width: 992px) {
         .modal-lg {
             max-width: 90%;
@@ -392,6 +396,21 @@
                                 </div>
 
                                 <!-- Card 13: Cheque TTD 1 -->
+                                <div class="col-md-2 mb-2" style="opacity: 0%">
+                                    <div class="card-info status-card border-left-danger h-100">
+                                        <div class="card-header p-1" style="background: #b3c983">
+                                            <h6 class="card-title-info mb-0"></h6>
+                                        </div>
+                                        <div class="card-body-info text-center">
+                                            <div class="text-info">
+                                            </div>
+                                        </div>
+                                        <div class="card-footer bg-white border-top-0 pt-0">
+                                            <small class="text-muted">Klik untuk detail</small>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <div class="col-md-2 mb-2">
                                     <div class="card-info status-card border-left-danger h-100" data-status="ttd1_only"
                                         data-title="Cheque TTD 1" data-api-endpoint="#">
