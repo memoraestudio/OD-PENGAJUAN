@@ -35,6 +35,8 @@
         font-size: 12px;
         padding: 5px;
         height: 100px;
+        display: grid;
+        align-items: center;
     }
 
     .card-body-info p {
@@ -59,14 +61,15 @@
 
     /* STATUS CARD HOVER */
     .status-card {
-        transition: all 0.3s ease;
+        /* transition: all 0.3s ease; */
         cursor: pointer;
-        border-left-width: 4px !important;
+        /* border-left-width: 4px !important; */
     }
 
     .status-card:hover {
-        transform: translateY(-5px);
+        /* transform: translateY(-5px); */
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        opacity: 0.7;
     }
 
     /* MODAL STYLING */
@@ -272,7 +275,7 @@
                                 <!-- Card 7: Cheque Yang Batal -->
                                 <div class="col-md-2 mb-2">
                                     <div class="card-info status-card border-left-success h-100"
-                                        data-status="tujuan_nominal_ttd1" data-title="Cheque Yang Batal"
+                                        data-status="tujuan_nominal_ttd1" data-title="Cheque Batal"
                                         data-api-endpoint="#">
                                         <div class="card-header p-1" style="background: #ff0000">
                                             <h6 class="card-title-info mb-0">Cheque Yang Batal</h6>
@@ -292,7 +295,7 @@
                                 <!-- Card 8: Cheque Isi Lengkap & TTD 1+2 -->
                                 <div class="col-md-2 mb-2">
                                     <div class="card-info status-card border-left-success h-100"
-                                        data-status="tujuan_nominal_ttd1_ttd2" data-title="Cheque Isi Tujuan"
+                                        data-status="cheque_isi_tujuan" data-title="Cheque Isi Tujuan"
                                         data-api-endpoint="#">
                                         <div class="card-header p-1" style="background: #f9d5b7">
                                             <h6 class="card-title-info mb-0">Isi Tujuan</h6>
@@ -370,8 +373,9 @@
 
                                 <!-- Card 12: Cheque Batal -->
                                 <div class="col-md-2 mb-2">
-                                    <div class="card-info status-card border-left-danger h-100" data-status="batal"
-                                        data-title="Cheque Batal" data-api-endpoint="#">
+                                    <div class="card-info status-card border-left-danger h-100"
+                                        data-status="cheque_tf_bank" data-title="Cheque Yang Di Transaksikan Ke BANK"
+                                        data-api-endpoint="#">
                                         <div class="card-header p-1" style="background: #008e40">
                                             <h6 class="card-title-info mb-0">Cheque Yang Di Transaksikan Ke BANK</h6>
                                         </div>
@@ -633,33 +637,10 @@
 
             tujuan_nominal_ttd1: {
                 columns: ['No', 'Kode Buku', 'No. Cheque', 'BANK', 'Perusahaan', 'Pengisi', 'Tujuan',
-                    'Nominal', 'TTD 1', 'Alasan Batal'
+                    'Nominal', 'TTD 1', 'TTD 2'
                 ],
                 fields: ['kode_buku', 'no_cheque', 'bank', 'perusahaan', 'pengisi', 'tujuan', 'nominal',
-                    'ttd1', 'alasan_batal'
-                ],
-                thead: `
-                <tr>
-                    <th>No.</th>
-                    <th>Kode Buku</th>
-                    <th>No. Cheque</th>
-                    <th>BANK</th>
-                    <th>Perusahaan</th>
-                    <th>Pengisi</th>
-                    <th>Tujuan</th>
-                    <th>Nominal</th>
-                    <th>TTD 1</th>
-                    <th>Alasan Batal</th>
-                </tr>
-            `
-            },
-
-            tujuan_nominal_ttd1_ttd2: {
-                columns: ['No', 'Kode Buku', 'No. Cheque', 'BANK', 'Perusahaan', 'Pengisi', 'Tujuan',
-                    'Nominal', 'TTD 1', 'TTD 2', 'Status Lengkap'
-                ],
-                fields: ['kode_buku', 'no_cheque', 'bank', 'perusahaan', 'pengisi', 'tujuan', 'nominal',
-                    'ttd1', 'ttd2', 'status_lengkap'
+                    'ttd1', 'ttd2'
                 ],
                 thead: `
                 <tr>
@@ -673,18 +654,31 @@
                     <th>Nominal</th>
                     <th>TTD 1</th>
                     <th>TTD 2</th>
-                    <th>Status Lengkap</th>
+                </tr>
+            `
+            },
+
+            cheque_isi_tujuan: {
+                columns: ['No', 'Kode Buku', 'No. Cheque', 'BANK', 'Perusahaan', 'Pengisi', 'Tujuan'],
+                fields: ['kode_buku', 'no_cheque', 'bank', 'perusahaan', 'pengisi', 'tujuan'],
+                thead: `
+                <tr>
+                    <th>No.</th>
+                    <th>Kode Buku</th>
+                    <th>No. Cheque</th>
+                    <th>BANK</th>
+                    <th>Perusahaan</th>
+                    <th>Pengisi</th>
+                    <th>Tujuan</th>
                 </tr>
             `
             },
 
             isi_tujuan_ttd1: {
                 columns: ['No', 'Kode Buku', 'No. Cheque', 'BANK', 'Perusahaan', 'Pengisi', 'Tujuan',
-                    'TTD 1', 'Vendor', 'Tanggal Serah Vendor'
+                    'TTD 1'
                 ],
-                fields: ['kode_buku', 'no_cheque', 'bank', 'perusahaan', 'pengisi', 'tujuan', 'ttd1',
-                    'vendor', 'tanggal_serah_vendor'
-                ],
+                fields: ['kode_buku', 'no_cheque', 'bank', 'perusahaan', 'pengisi', 'tujuan', 'ttd1'],
                 thead: `
                 <tr>
                     <th>No.</th>
@@ -695,18 +689,16 @@
                     <th>Pengisi</th>
                     <th>Tujuan</th>
                     <th>TTD 1</th>
-                    <th>Vendor</th>
-                    <th>Tanggal Serah Vendor</th>
                 </tr>
             `
             },
 
             isi_tujuan_ttd_lengkap: {
                 columns: ['No', 'Kode Buku', 'No. Cheque', 'BANK', 'Perusahaan', 'Pengisi', 'Tujuan',
-                    'TTD 1', 'TTD 2', 'Bank Tujuan', 'Tanggal Transfer'
+                    'TTD 1', 'TTD 2'
                 ],
                 fields: ['kode_buku', 'no_cheque', 'bank', 'perusahaan', 'pengisi', 'tujuan', 'ttd1',
-                    'ttd2', 'bank_tujuan', 'tanggal_transfer'
+                    'ttd2'
                 ],
                 thead: `
                 <tr>
@@ -719,8 +711,6 @@
                     <th>Tujuan</th>
                     <th>TTD 1</th>
                     <th>TTD 2</th>
-                    <th>Bank Tujuan</th>
-                    <th>Tanggal Transfer</th>
                 </tr>
             `
             },
@@ -747,12 +737,12 @@
             `
             },
 
-            batal: {
-                columns: ['No', 'Kode Buku', 'No. Cheque', 'BANK', 'Perusahaan', 'Pengisi', 'Nominal',
-                    'Alasan Batal', 'Tanggal Batal'
+            cheque_tf_bank: {
+                columns: ['No', 'Kode Buku', 'No. Cheque', 'BANK', 'Perusahaan', 'Pengisi', 'Tujuan',
+                    'Nominal', 'TTD 1', 'TTD 2'
                 ],
-                fields: ['kode_buku', 'no_cheque', 'bank', 'perusahaan', 'pengisi', 'nominal',
-                    'alasan_batal', 'tanggal_batal'
+                fields: ['kode_buku', 'no_cheque', 'bank', 'perusahaan', 'pengisi', 'tujuan',
+                    'nominal', 'ttd1', 'ttd2'
                 ],
                 thead: `
                 <tr>
@@ -762,18 +752,17 @@
                     <th>BANK</th>
                     <th>Perusahaan</th>
                     <th>Pengisi</th>
+                    <th>Tujuan</th>
                     <th>Nominal</th>
-                    <th>Alasan Batal</th>
-                    <th>Tanggal Batal</th>
+                    <th>TTD 1</th>
+                    <th>TTD 2</th>
                 </tr>
             `
             },
 
             ttd1_only: {
-                columns: ['No', 'Kode Buku', 'No. Cheque', 'BANK', 'Perusahaan', 'Pengisi', 'TTD 1',
-                    'Tanggal TTD'
-                ],
-                fields: ['kode_buku', 'no_cheque', 'bank', 'perusahaan', 'pengisi', 'ttd1', 'tanggal_ttd'],
+                columns: ['No', 'Kode Buku', 'No. Cheque', 'BANK', 'Perusahaan', 'Pengisi', 'TTD 1', ],
+                fields: ['kode_buku', 'no_cheque', 'bank', 'perusahaan', 'pengisi', 'ttd1'],
                 thead: `
                 <tr>
                     <th>No.</th>
@@ -783,7 +772,6 @@
                     <th>Perusahaan</th>
                     <th>Pengisi</th>
                     <th>TTD 1</th>
-                    <th>Tanggal TTD</th>
                 </tr>
             `
             },
