@@ -1,341 +1,63 @@
 @extends('layouts.admin')
 
-
 @section('title')
 <title>Status Cheque</title>
 @endsection
 
 @section('content')
-<main class="main">
-    <ol class="breadcrumb">
-        <li class="breadcrumb-item">Home</li>
-        <li class="breadcrumb-item active">Status Cheque</li>
-    </ol>
-
-    <div class="container-fluid">
-        <div class="animated fadeIn">
-            <div class="row">
-                <div class="col-12">
-                    <div class="card shadow-sm">
-                        <div class="card-header py-2">
-                            <div class="d-flex align-items-center justify-content-between">
-                                <div>
-                                    <h4 class="card-title mb-0" style="margin-left: -9px">
-                                        <i class="fas fa-file-invoice-dollar mr-2"></i> Status Cheque
-                                    </h4>
-                                    <small>Monitoring Status Cheque Perusahaan</small>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div class="card-body">
-                            <!-- Status Summary Cards -->
-                            <div class="row">
-                                <!-- Row 1 -->
-                                <div class="col-md-3 mb-4">
-                                    <div class="card status-card border-left-secondary h-100" data-status="blank"
-                                        data-title="Cheque Blank">
-                                        <div class="card-header bg-white border-bottom-0 pb-0">
-                                            <h6 class="card-title mb-0">
-                                                <i class="fas fa-file-alt mr-2 text-secondary"></i>
-                                                Cheque Blank
-                                            </h6>
-                                        </div>
-                                        <div class="card-body text-center py-2">
-                                        </div>
-                                        <div class="card-footer bg-white border-top-0 pt-0">
-                                            <small class="text-muted">Klik untuk detail</small>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-3 mb-4">
-                                    <div class="card status-card border-left-info h-100" data-status="nominal_tujuan"
-                                        data-title="Cheque Isi Nominal & Tujuan">
-                                        <div class="card-header bg-white border-bottom-0 pb-0">
-                                            <h6 class="card-title mb-0">
-                                                <i class="fas fa-file-invoice-dollar mr-2 text-info"></i>
-                                                Isi Nominal & Tujuan
-                                            </h6>
-                                        </div>
-                                        <div class="card-body text-center py-2">
-                                        </div>
-                                        <div class="card-footer bg-white border-top-0 pt-0">
-                                            <small class="text-muted">Klik untuk detail</small>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-3 mb-4">
-                                    <div class="card status-card border-left-warning h-100" data-status="tujuan"
-                                        data-title="Cheque Isi Tujuan">
-                                        <div class="card-header bg-white border-bottom-0 pb-0">
-                                            <h6 class="card-title mb-0">
-                                                <i class="fas fa-file-signature mr-2 text-warning"></i>
-                                                Isi Tujuan
-                                            </h6>
-                                        </div>
-                                        <div class="card-body text-center py-2">
-                                        </div>
-                                        <div class="card-footer bg-white border-top-0 pt-0">
-                                            <small class="text-muted">Klik untuk detail</small>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-3 mb-4">
-                                    <div class="card status-card border-left-success h-100" data-status="tujuan_ttd1"
-                                        data-title="Cheque Isi Tujuan & TTD 1">
-                                        <div class="card-header bg-white border-bottom-0 pb-0">
-                                            <h6 class="card-title mb-0">
-                                                <i class="fas fa-file-contract mr-2 text-success"></i>
-                                                Isi Tujuan & TTD 1
-                                            </h6>
-                                        </div>
-                                        <div class="card-body text-center py-2">
-                                        </div>
-                                        <div class="card-footer bg-white border-top-0 pt-0">
-                                            <small class="text-muted">Klik untuk detail</small>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Row 2 -->
-                                <div class="col-md-3 mb-4">
-                                    <div class="card status-card border-left-primary h-100" data-status="tujuan_ttd2"
-                                        data-title="Cheque Isi Tujuan & TTD 2">
-                                        <div class="card-header bg-white border-bottom-0 pb-0">
-                                            <h6 class="card-title mb-0">
-                                                <i class="fas fa-file-contract mr-2 text-primary"></i>
-                                                Isi Tujuan & TTD 2
-                                            </h6>
-                                        </div>
-                                        <div class="card-body text-center py-2">
-                                        </div>
-                                        <div class="card-footer bg-white border-top-0 pt-0">
-                                            <small class="text-muted">Klik untuk detail</small>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-3 mb-4">
-                                    <div class="card status-card border-left-info h-100" data-status="ttd1"
-                                        data-title="Cheque Isi TTD 1">
-                                        <div class="card-header bg-white border-bottom-0 pb-0">
-                                            <h6 class="card-title mb-0">
-                                                <i class="fas fa-signature mr-2 text-info"></i>
-                                                Isi TTD 1
-                                            </h6>
-                                        </div>
-                                        <div class="card-body text-center py-2">
-                                        </div>
-                                        <div class="card-footer bg-white border-top-0 pt-0">
-                                            <small class="text-muted">Klik untuk detail</small>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-3 mb-4">
-                                    <div class="card status-card border-left-success h-100"
-                                        data-status="tujuan_nominal_ttd1"
-                                        data-title="Cheque Isi Tujuan, Nominal & TTD 1">
-                                        <div class="card-header bg-white border-bottom-0 pb-0">
-                                            <h6 class="card-title mb-0">
-                                                <i class="fas fa-file-invoice mr-2 text-success"></i>
-                                                Isi Lengkap & TTD 1
-                                            </h6>
-                                        </div>
-                                        <div class="card-body text-center py-2">
-                                        </div>
-                                        <div class="card-footer bg-white border-top-0 pt-0">
-                                            <small class="text-muted">Klik untuk detail</small>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-3 mb-4">
-                                    <div class="card status-card border-left-success h-100"
-                                        data-status="tujuan_nominal_ttd1_ttd2"
-                                        data-title="Cheque Isi Lengkap & TTD 1+2">
-                                        <div class="card-header bg-white border-bottom-0 pb-0">
-                                            <h6 class="card-title mb-0">
-                                                <i class="fas fa-file-certificate mr-2 text-success"></i>
-                                                Isi Lengkap & TTD 1+2
-                                            </h6>
-                                        </div>
-                                        <div class="card-body text-center py-2">
-                                        </div>
-                                        <div class="card-footer bg-white border-top-0 pt-0">
-                                            <small class="text-muted">Klik untuk detail</small>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Row 3 -->
-                                <div class="col-md-3 mb-4">
-                                    <div class="card status-card border-left-warning h-100"
-                                        data-status="serahkan_vendor" data-title="Cheque Serahkan ke Vendor">
-                                        <div class="card-header bg-white border-bottom-0 pb-0">
-                                            <h6 class="card-title mb-0">
-                                                <i class="fas fa-truck mr-2 text-warning"></i>
-                                                Serahkan ke Vendor
-                                            </h6>
-                                        </div>
-                                        <div class="card-body text-center py-2">
-                                        </div>
-                                        <div class="card-footer bg-white border-top-0 pt-0">
-                                            <small class="text-muted">Klik untuk detail</small>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-3 mb-4">
-                                    <div class="card status-card border-left-info h-100" data-status="tamassalam_bank"
-                                        data-title="Cheque Transfer ke Bank">
-                                        <div class="card-header bg-white border-bottom-0 pb-0">
-                                            <h6 class="card-title mb-0">
-                                                <i class="fas fa-university mr-2 text-info"></i>
-                                                Transfer ke Bank
-                                            </h6>
-                                        </div>
-                                        <div class="card-body text-center py-2">
-                                        </div>
-                                        <div class="card-footer bg-white border-top-0 pt-0">
-                                            <small class="text-muted">Klik untuk detail</small>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-3 mb-4">
-                                    <div class="card status-card border-left-primary h-100" data-status="serahkan_metro"
-                                        data-title="Cheque Serahkan ke Metro/HO">
-                                        <div class="card-header bg-white border-bottom-0 pb-0">
-                                            <h6 class="card-title mb-0">
-                                                <i class="fas fa-building mr-2 text-primary"></i>
-                                                Serahkan ke Metro/HO
-                                            </h6>
-                                        </div>
-                                        <div class="card-body text-center py-2">
-                                        </div>
-                                        <div class="card-footer bg-white border-top-0 pt-0">
-                                            <small class="text-muted">Klik untuk detail</small>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-3 mb-4">
-                                    <div class="card status-card border-left-danger h-100" data-status="batal"
-                                        data-title="Cheque Batal">
-                                        <div class="card-header bg-white border-bottom-0 pb-0">
-                                            <h6 class="card-title mb-0">
-                                                <i class="fas fa-times-circle mr-2 text-danger"></i>
-                                                Cheque Batal
-                                            </h6>
-                                        </div>
-                                        <div class="card-body text-center py-2">
-                                        </div>
-                                        <div class="card-footer bg-white border-top-0 pt-0">
-                                            <small class="text-muted">Klik untuk detail</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</main>
-
-<!-- Modal Detail Cheque -->
-<div class="modal fade" id="modalDetailCheque" tabindex="-1" role="dialog" aria-labelledby="modalDetailChequeLabel">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header bg-primary text-white">
-                <h5 class="modal-title">
-                    <i class="fas fa-file-invoice-dollar mr-2"></i>
-                    <span id="modalStatusTitle">Detail Cheque</span>
-                </h5>
-                <button type="button" class="close text-white" data-dismiss="modal">
-                    <span>&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="alert alert-info">
-                    <i class="fas fa-info-circle mr-2"></i>
-                    Menampilkan data cheque untuk status: <strong id="modalStatusDesc">-</strong>
-                </div>
-
-                <!-- Filter Controls -->
-                <div class="row mb-3">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label class="small">Tampilkan per halaman:</label>
-                            <select class="form-control form-control-sm" id="modalItemsPerPage">
-                                <option value="10">10</option>
-                                <option value="25">25</option>
-                                <option value="50">50</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label class="small">Cari data:</label>
-                            <input type="text" class="form-control form-control-sm" id="modalSearchInput"
-                                placeholder="Cari berdasarkan no cheque, vendor, dll...">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Table -->
-                <div class="table-responsive">
-                    <table class="table table-sm table-hover">
-                        <thead class="thead-light">
-                            <tr>
-                                <th width="5%">No</th>
-                                <th>No. Cheque</th>
-                                <th>Vendor</th>
-                                <th>Nominal</th>
-                                <th>Bank</th>
-                                <th>Tanggal</th>
-                            </tr>
-                        </thead>
-                        <tbody id="modalChequeData">
-                            <!-- Data akan diisi via JavaScript -->
-                        </tbody>
-                    </table>
-                </div>
-
-                <!-- Pagination -->
-                <div class="d-flex justify-content-between align-items-center mt-3">
-                    <div class="text-muted small">
-                        Menampilkan <span id="modalPageStart">0</span> - <span id="modalPageEnd">0</span>
-                        dari <span id="modalTotalData">0</span> data
-                    </div>
-                    <nav>
-                        <ul class="pagination pagination-sm mb-0" id="modalPagination">
-                            <!-- Pagination akan diisi via JavaScript -->
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">
-                    <i class="fas fa-times mr-1"></i> Tutup
-                </button>
-                <button type="button" class="btn btn-primary btn-sm" id="btnExport">
-                    <i class="fas fa-download mr-1"></i> Export
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-@endsection
-
-@section('css')
 <style>
+    /* CUSTOM STYLES */
+    .col-md-2 {
+        padding-right: 5px !important;
+        padding-left: 5px !important;
+    }
+
+    .card-info {
+        border-radius: 5px;
+        border: 1px solid #e0e0e0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+        cursor: pointer;
+    }
+
+    .card-title-info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center !important;
+        text-transform: uppercase !important;
+        font-size: 12px;
+        font-weight: 600;
+        height: 55px;
+    }
+
+    .card-body-info {
+        font-size: 12px;
+        padding: 5px;
+        height: 100px;
+    }
+
+    .card-body-info p {
+        margin: 0;
+        padding: 0;
+        text-align: left;
+    }
+
+    .text-info {
+        color: #505050 !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-info h5 {
+        font-size: 20px;
+        margin: 0;
+        padding: 0;
+        font-weight: 700;
+    }
+
+    /* STATUS CARD HOVER */
     .status-card {
         transition: all 0.3s ease;
         cursor: pointer;
@@ -347,21 +69,11 @@
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
 
-    .status-card .card-title {
-        font-size: 0.95rem;
-        font-weight: 600;
+    /* MODAL STYLING */
+    .modal-lg {
+        max-width: 90%;
     }
 
-    .status-count {
-        font-size: 2.5rem;
-        line-height: 1;
-    }
-
-    .card-header.bg-primary {
-        background: linear-gradient(135deg, #0069d9 0%, #0056b3 100%);
-    }
-
-    /* Modal styling */
     .modal-header {
         padding: 0.75rem 1rem;
     }
@@ -386,82 +98,756 @@
         vertical-align: middle;
     }
 
-    /* Responsive adjustments */
-    <blade media|%20(max-width%3A%20768px)%20%7B%0D>.status-count {
-        font-size: 2rem;
+    @@media (min-width: 992px) {
+        .modal-lg {
+            max-width: 90%;
+        }
     }
 
-    .card-header .d-flex {
-        flex-direction: column;
-        text-align: center;
+    /* RESPONSIVE */
+    @@media (min-width: 992px) {
+        .modal-lg {
+            max-width: 90%;
+        }
     }
 
-    .card-header .d-flex>div:last-child {
-        margin-top: 10px;
-    }
+    @@media (max-width: 768px) {
+        .status-count {
+            font-size: 2rem;
+        }
     }
 
 </style>
+<main class="main">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">Home</li>
+        <li class="breadcrumb-item active">Status Cheque</li>
+    </ol>
+
+    <div class="container-fluid">
+        <div class="animated fadeIn">
+            <div class="row">
+                <div class="col-12">
+                    <!-- MAIN CARD -->
+                    <div class="card shadow-sm">
+
+                        <!-- CARD HEADER -->
+                        <div class="card-header py-2">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div>
+                                    <h4 class="card-title mb-0" style="margin-left: -9px">
+                                        <i class="fas fa-file-invoice-dollar mr-2"></i> Status Cheque
+                                    </h4>
+                                    <small>Monitoring Status Cheque Perusahaan</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CARD BODY - STATUS CARDS -->
+                        <div class="card-body">
+                            <div class="row">
+                                <!-- STATUS CARD TEMPLATE - Gunakan pola ini untuk semua card -->
+                                <!-- Card 1: Cheque Blank -->
+                                <div class="col-md-2 mb-2">
+                                    <div class="card-info status-card border-left-secondary h-100"
+                                        data-status="cheque_blank" data-title="Cheque Blank" data-api-endpoint="#">
+                                        <div class="card-header p-1" style="background: #96cede;">
+                                            <h6 class="card-title-info mb-0">Cheque Blank</h6>
+                                        </div>
+                                        <div class="card-body-info text-center">
+                                            <div class="text-info">
+                                                <p>Total Buku Cheque</p>
+                                                <h5 data-counter="books">8</h5>
+                                            </div>
+                                            <div class="text-info">
+                                                <p>Total Lembar Cheque</p>
+                                                <h5 data-counter="sheets">160</h5>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer bg-white border-top-0 pt-0">
+                                            <small class="text-muted">Klik untuk detail</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Card 2: Isi Tujuan & Nominal -->
+                                <div class="col-md-2 mb-2">
+                                    <div class="card-info status-card border-left-info h-100"
+                                        data-status="isi_tujuan_nominal" data-title="Cheque Isi Tujuan & Nominal"
+                                        data-api-endpoint="#">
+                                        <div class="card-header p-1" style="background: #c7bbd5;">
+                                            <h6 class="card-title-info mb-0">Isi Tujuan & Nominal</h6>
+                                        </div>
+                                        <div class="card-body-info text-center">
+                                            <div class="text-info">
+                                                <p>Total Lembar Cheque</p>
+                                                <h5 data-counter="sheets">10</h5>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer bg-white border-top-0 pt-0">
+                                            <small class="text-muted">Klik untuk detail</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Card 3: Isi Tujuan, Nominal & TTD 1 -->
+                                <div class="col-md-2 mb-2">
+                                    <div class="card-info status-card border-left-warning h-100"
+                                        data-status="isi_tujuan_nominal_ttd1" data-title="Isi Tujuan, Nominal & TTD 1"
+                                        data-api-endpoint="#">
+                                        <div class="card-header p-1" style="background: #ffce3c">
+                                            <h6 class="card-title-info mb-0">Isi Tujuan, Nominal & TTD 1</h6>
+                                        </div>
+                                        <div class="card-body-info text-center">
+                                            <div class="text-info">
+                                                <p>Total Lembar Cheque</p>
+                                                <h5 data-counter="sheets">10</h5>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer bg-white border-top-0 pt-0">
+                                            <small class="text-muted">Klik untuk detail</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Card 4: Isi Tujuan, Nominal & TTD Lengkap -->
+                                <div class="col-md-2 mb-2">
+                                    <div class="card-info status-card border-left-success h-100"
+                                        data-status="isi_tujuan_nominal_ttdlengkap"
+                                        data-title="Cheque Isi, Tujuan, Nominal & TTD Lengkap" data-api-endpoint="#">
+                                        <div class="card-header p-1" style="background: #7ec234">
+                                            <h6 class="card-title-info mb-0">Isi Tujuan, Nominal & TTD Lengkap</h6>
+                                        </div>
+                                        <div class="card-body-info text-center">
+                                            <div class="text-info">
+                                                <p>Total Lembar Cheque</p>
+                                                <h5 data-counter="sheets">10</h5>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer bg-white border-top-0 pt-0">
+                                            <small class="text-muted">Klik untuk detail</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Card 5: Cheque di Serahkan Ke Metro/HO -->
+                                <div class="col-md-2 mb-2">
+                                    <div class="card-info status-card border-left-primary h-100"
+                                        data-status="cheque_diserahkan_ke_metro"
+                                        data-title="Cheque di Serahkan Ke Metro/HO" data-api-endpoint="#">
+                                        <div class="card-header p-1" style="background: #f2872f">
+                                            <h6 class="card-title-info mb-0">Cheque di Serahkan Ke Metro/HO</h6>
+                                        </div>
+                                        <div class="card-body-info text-center">
+                                            <div class="text-info">
+                                                <p>Total Lembar Cheque</p>
+                                                <h5 data-counter="sheets">10</h5>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer bg-white border-top-0 pt-0">
+                                            <small class="text-muted">Klik untuk detail</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Card 6: Cheque di Serahkan ke Vendor -->
+                                <div class="col-md-2 mb-2">
+                                    <div class="card-info status-card border-left-info h-100" data-status="ttd1"
+                                        data-title="Cheque di Serahkan ke Vendor" data-api-endpoint="#">
+                                        <div class="card-header p-1" style="background: #008fc6">
+                                            <h6 class="card-title-info mb-0">Cheque di Serahkan ke Vendor</h6>
+                                        </div>
+                                        <div class="card-body-info text-center">
+                                            <div class="text-info">
+                                                <p>Total Lembar Cheque</p>
+                                                <h5 data-counter="sheets">10</h5>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer bg-white border-top-0 pt-0">
+                                            <small class="text-muted">Klik untuk detail</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Card 7: Cheque Yang Batal -->
+                                <div class="col-md-2 mb-2">
+                                    <div class="card-info status-card border-left-success h-100"
+                                        data-status="tujuan_nominal_ttd1" data-title="Cheque Yang Batal"
+                                        data-api-endpoint="#">
+                                        <div class="card-header p-1" style="background: #ff0000">
+                                            <h6 class="card-title-info mb-0">Cheque Yang Batal</h6>
+                                        </div>
+                                        <div class="card-body-info text-center">
+                                            <div class="text-info">
+                                                <p>Total Lembar Cheque</p>
+                                                <h5 data-counter="sheets">10</h5>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer bg-white border-top-0 pt-0">
+                                            <small class="text-muted">Klik untuk detail</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Card 8: Cheque Isi Lengkap & TTD 1+2 -->
+                                <div class="col-md-2 mb-2">
+                                    <div class="card-info status-card border-left-success h-100"
+                                        data-status="tujuan_nominal_ttd1_ttd2" data-title="Cheque Isi Tujuan"
+                                        data-api-endpoint="#">
+                                        <div class="card-header p-1" style="background: #f9d5b7">
+                                            <h6 class="card-title-info mb-0">Isi Tujuan</h6>
+                                        </div>
+                                        <div class="card-body-info text-center">
+                                            <div class="text-info">
+                                                <p>Total Lembar Cheque</p>
+                                                <h5 data-counter="sheets">10</h5>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer bg-white border-top-0 pt-0">
+                                            <small class="text-muted">Klik untuk detail</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Card 9: Cheque Serahkan ke Vendor -->
+                                <div class="col-md-2 mb-2">
+                                    <div class="card-info status-card border-left-warning h-100"
+                                        data-status="isi_tujuan_ttd1" data-title="Isi Tujuan dan TTD 1"
+                                        data-api-endpoint="#">
+                                        <div class="card-header p-1" style="background: #fedb70">
+                                            <h6 class="card-title-info mb-0">Isi Tujuan dan TTD 1</h6>
+                                        </div>
+                                        <div class="card-body-info text-center">
+                                            <div class="text-info">
+                                                <p>Total Lembar Cheque</p>
+                                                <h5 data-counter="sheets">10</h5>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer bg-white border-top-0 pt-0">
+                                            <small class="text-muted">Klik untuk detail</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Card 10: Cheque Transfer ke Bank -->
+                                <div class="col-md-2 mb-2">
+                                    <div class="card-info status-card border-left-info h-100"
+                                        data-status="isi_tujuan_ttd_lengkap" data-title="Isi Tujuan, TTD Lengkap"
+                                        data-api-endpoint="#">
+                                        <div class="card-header p-1" style="background: #e7bdba">
+                                            <h6 class="card-title-info mb-0">Isi Tujuan, TTD Lengkap</h6>
+                                        </div>
+                                        <div class="card-body-info text-center">
+                                            <div class="text-info">
+                                                <p>Total Lembar Cheque</p>
+                                                <h5 data-counter="sheets">10</h5>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer bg-white border-top-0 pt-0">
+                                            <small class="text-muted">Klik untuk detail</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Card 11: Cheque Serahkan ke Metro/HO -->
+                                <div class="col-md-2 mb-2">
+                                    <div class="card-info status-card border-left-primary h-100"
+                                        data-status="isi_nominal" data-title="Cheque Nominal" data-api-endpoint="#">
+                                        <div class="card-header p-1" style="background: #b3c983">
+                                            <h6 class="card-title-info mb-0">Isi Nominal</h6>
+                                        </div>
+                                        <div class="card-body-info text-center">
+                                            <div class="text-info">
+                                                <p>Total Lembar Cheque</p>
+                                                <h5 data-counter="sheets">10</h5>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer bg-white border-top-0 pt-0">
+                                            <small class="text-muted">Klik untuk detail</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Card 12: Cheque Batal -->
+                                <div class="col-md-2 mb-2">
+                                    <div class="card-info status-card border-left-danger h-100" data-status="batal"
+                                        data-title="Cheque Batal" data-api-endpoint="#">
+                                        <div class="card-header p-1" style="background: #008e40">
+                                            <h6 class="card-title-info mb-0">Cheque Yang Di Transaksikan Ke BANK</h6>
+                                        </div>
+                                        <div class="card-body-info text-center">
+                                            <div class="text-info">
+                                                <p>Total Lembar Cheque</p>
+                                                <h5 data-counter="sheets">10</h5>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer bg-white border-top-0 pt-0">
+                                            <small class="text-muted">Klik untuk detail</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Card 13: Cheque TTD 1 -->
+                                <div class="col-md-2 mb-2">
+                                    <div class="card-info status-card border-left-danger h-100" data-status="ttd1_only"
+                                        data-title="Cheque TTD 1" data-api-endpoint="#">
+                                        <div class="card-header p-1" style="background: #b3c983">
+                                            <h6 class="card-title-info mb-0">Cheque TTD 1</h6>
+                                        </div>
+                                        <div class="card-body-info text-center">
+                                            <div class="text-info">
+                                                <p>Total Lembar Cheque</p>
+                                                <h5 data-counter="sheets">10</h5>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer bg-white border-top-0 pt-0">
+                                            <small class="text-muted">Klik untuk detail</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- ==================== MODAL DETAIL CHEQUE ==================== -->
+<div class="modal fade" id="modalDetailCheque" tabindex="-1" role="dialog" aria-labelledby="modalDetailChequeLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <!-- MODAL HEADER -->
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title">
+                    <i class="fas fa-file-invoice-dollar mr-2"></i>
+                    <span id="modalStatusTitle">Detail Cheque</span>
+                </h5>
+                <button type="button" class="close text-white" data-dismiss="modal">
+                    <span>&times;</span>
+                </button>
+            </div>
+
+            <!-- MODAL BODY -->
+            <div class="modal-body">
+                <!-- INFO ALERT -->
+                <div class="alert alert-info">
+                    <i class="fas fa-info-circle mr-2"></i>
+                    Menampilkan data cheque untuk status: <strong id="modalStatusDesc">-</strong>
+                </div>
+
+                <!-- FILTER CONTROLS -->
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="small">Tampilkan per halaman:</label>
+                            <select class="form-control form-control-sm" id="modalItemsPerPage">
+                                <option value="10">10</option>
+                                <option value="25">25</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="small">Cari data:</label>
+                            <input type="text" class="form-control form-control-sm" id="modalSearchInput"
+                                placeholder="Cari berdasarkan no cheque, vendor, dll...">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TABLE CONTAINER -->
+                <div class="table-responsive" id="modalTableContainer">
+                    <!-- Tabel akan di-render via JavaScript -->
+                </div>
+
+                <!-- PAGINATION INFO -->
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                    <div class="text-muted small">
+                        Menampilkan <span id="modalPageStart">0</span> - <span id="modalPageEnd">0</span>
+                        dari <span id="modalTotalData">0</span> data
+                    </div>
+                    <nav>
+                        <ul class="pagination pagination-sm mb-0" id="modalPagination">
+                            <!-- Pagination akan diisi via JavaScript -->
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- MODAL FOOTER -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">
+                    <i class="fas fa-times mr-1"></i> Tutup
+                </button>
+                <button type="button" class="btn btn-primary btn-sm" id="btnExport">
+                    <i class="fas fa-download mr-1"></i> Export
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
 @endsection
 
 @section('js')
 <script>
-    // Cheque Status Module
-    const ChequeModule = {
-        // Module configuration
-        config: {
+    // ==================== CHEQUE STATUS MODULE ====================
+    const ChequeModule = (function () {
+        // Configuration object
+        const config = {
             itemsPerPage: 10,
             currentPage: 1,
             searchTerm: '',
-            currentStatus: ''
-        },
+            currentStatus: '',
+            currentTitle: '',
+            debounceTimer: null
+        };
+
+        // Complete table templates for ALL statuses
+        const tableTemplates = {
+            // ===== STATUS YANG SUDAH ADA =====
+            cheque_blank: {
+                columns: ['No', 'Kode Buku Cheque', 'Penerima cheque dari Bank', 'Pemegang Buku Cheque',
+                    'BANK', 'Perusahaan'
+                ],
+                fields: ['kode_buku', 'penerima_bank', 'pemegang_buku', 'bank', 'perusahaan'],
+                thead: `
+                <tr>
+                    <th>No.</th>
+                    <th>Kode Buku Cheque</th>
+                    <th>Penerima cheque dari Bank</th>
+                    <th>Pemegang Buku Cheque</th>
+                    <th>BANK</th>
+                    <th>Perusahaan</th>
+                </tr>
+            `
+            },
+            isi_tujuan_nominal: {
+                columns: ['No', 'Kode Buku Cheque', 'No. Cheque', 'BANK', 'Perusahaan', 'Pengisi Cheque',
+                    'Tujuan Cheque', 'Nominal'
+                ],
+                fields: ['kode_buku', 'no_cheque', 'bank', 'perusahaan', 'pengisi', 'tujuan', 'nominal'],
+                thead: `
+                <tr>
+                    <th>No.</th>
+                    <th>Kode Buku Cheque</th>
+                    <th>No. Cheque</th>
+                    <th>BANK</th>
+                    <th>Perusahaan</th>
+                    <th>Pengisi Cheque</th>
+                    <th>Tujuan Cheque</th>
+                    <th>Nominal</th>
+                </tr>
+            `
+            },
+            isi_tujuan_nominal_ttd1: {
+                columns: ['No', 'Kode Buku Cheque', 'No. Cheque', 'BANK', 'Perusahaan', 'Pengisi Cheque',
+                    'Tujuan Cheque', 'TTD'
+                ],
+                fields: ['kode_buku', 'no_cheque', 'bank', 'perusahaan', 'pengisi', 'tujuan', 'ttd'],
+                thead: `
+                <tr>
+                    <th>No.</th>
+                    <th>Kode Buku Cheque</th>
+                    <th>No. Cheque</th>
+                    <th>BANK</th>
+                    <th>Perusahaan</th>
+                    <th>Pengisi Cheque</th>
+                    <th>Tujuan Cheque</th>
+                    <th>TTD</th>
+                </tr>
+            `
+            },
+            isi_tujuan_nominal_ttdlengkap: {
+                columns: ['No', 'Kode Buku Cheque', 'No. Cheque', 'BANK', 'Perusahaan', 'Pengisi Cheque',
+                    'Tujuan Cheque', 'Nominal', 'TTD 1', 'TTD 2'
+                ],
+                fields: ['kode_buku', 'no_cheque', 'bank', 'perusahaan', 'pengisi', 'tujuan', 'nominal',
+                    'ttd1', 'ttd2'
+                ],
+                thead: `
+                <tr>
+                    <th>No.</th>
+                    <th>Kode Buku Cheque</th>
+                    <th>No. Cheque</th>
+                    <th>BANK</th>
+                    <th>Perusahaan</th>
+                    <th>Pengisi Cheque</th>
+                    <th>Tujuan Cheque</th>
+                    <th>Nominal</th>
+                    <th>TTD 1</th>
+                    <th>TTD 2</th>
+                </tr>
+            `
+            },
+
+            // ===== STATUS YANG BELUM ADA - DITAMBAHKAN =====
+            cheque_diserahkan_ke_metro: {
+                columns: ['No', 'Kode Buku', 'No. Cheque', 'BANK', 'Perusahaan', 'Pengisi', 'Tujuan',
+                    'Nominal', 'TTD 1', 'TTD 2', 'Tanggal Serah'
+                ],
+                fields: ['kode_buku', 'no_cheque', 'bank', 'perusahaan', 'pengisi', 'tujuan', 'nominal',
+                    'ttd1', 'ttd2', 'tanggal_serah'
+                ],
+                thead: `
+                <tr>
+                    <th>No.</th>
+                    <th>Kode Buku</th>
+                    <th>No. Cheque</th>
+                    <th>BANK</th>
+                    <th>Perusahaan</th>
+                    <th>Pengisi</th>
+                    <th>Tujuan</th>
+                    <th>Nominal</th>
+                    <th>TTD 1</th>
+                    <th>TTD 2</th>
+                    <th>Tanggal Serah</th>
+                </tr>
+            `
+            },
+
+            ttd1: {
+                columns: ['No', 'Kode Buku', 'No. Cheque', 'BANK', 'Perusahaan', 'Pengisi', 'Tujuan',
+                    'TTD 1', 'Tanggal TTD'
+                ],
+                fields: ['kode_buku', 'no_cheque', 'bank', 'perusahaan', 'pengisi', 'tujuan', 'ttd1',
+                    'tanggal_ttd'
+                ],
+                thead: `
+                <tr>
+                    <th>No.</th>
+                    <th>Kode Buku</th>
+                    <th>No. Cheque</th>
+                    <th>BANK</th>
+                    <th>Perusahaan</th>
+                    <th>Pengisi</th>
+                    <th>Tujuan</th>
+                    <th>TTD 1</th>
+                    <th>Tanggal TTD</th>
+                </tr>
+            `
+            },
+
+            tujuan_nominal_ttd1: {
+                columns: ['No', 'Kode Buku', 'No. Cheque', 'BANK', 'Perusahaan', 'Pengisi', 'Tujuan',
+                    'Nominal', 'TTD 1', 'Alasan Batal'
+                ],
+                fields: ['kode_buku', 'no_cheque', 'bank', 'perusahaan', 'pengisi', 'tujuan', 'nominal',
+                    'ttd1', 'alasan_batal'
+                ],
+                thead: `
+                <tr>
+                    <th>No.</th>
+                    <th>Kode Buku</th>
+                    <th>No. Cheque</th>
+                    <th>BANK</th>
+                    <th>Perusahaan</th>
+                    <th>Pengisi</th>
+                    <th>Tujuan</th>
+                    <th>Nominal</th>
+                    <th>TTD 1</th>
+                    <th>Alasan Batal</th>
+                </tr>
+            `
+            },
+
+            tujuan_nominal_ttd1_ttd2: {
+                columns: ['No', 'Kode Buku', 'No. Cheque', 'BANK', 'Perusahaan', 'Pengisi', 'Tujuan',
+                    'Nominal', 'TTD 1', 'TTD 2', 'Status Lengkap'
+                ],
+                fields: ['kode_buku', 'no_cheque', 'bank', 'perusahaan', 'pengisi', 'tujuan', 'nominal',
+                    'ttd1', 'ttd2', 'status_lengkap'
+                ],
+                thead: `
+                <tr>
+                    <th>No.</th>
+                    <th>Kode Buku</th>
+                    <th>No. Cheque</th>
+                    <th>BANK</th>
+                    <th>Perusahaan</th>
+                    <th>Pengisi</th>
+                    <th>Tujuan</th>
+                    <th>Nominal</th>
+                    <th>TTD 1</th>
+                    <th>TTD 2</th>
+                    <th>Status Lengkap</th>
+                </tr>
+            `
+            },
+
+            isi_tujuan_ttd1: {
+                columns: ['No', 'Kode Buku', 'No. Cheque', 'BANK', 'Perusahaan', 'Pengisi', 'Tujuan',
+                    'TTD 1', 'Vendor', 'Tanggal Serah Vendor'
+                ],
+                fields: ['kode_buku', 'no_cheque', 'bank', 'perusahaan', 'pengisi', 'tujuan', 'ttd1',
+                    'vendor', 'tanggal_serah_vendor'
+                ],
+                thead: `
+                <tr>
+                    <th>No.</th>
+                    <th>Kode Buku</th>
+                    <th>No. Cheque</th>
+                    <th>BANK</th>
+                    <th>Perusahaan</th>
+                    <th>Pengisi</th>
+                    <th>Tujuan</th>
+                    <th>TTD 1</th>
+                    <th>Vendor</th>
+                    <th>Tanggal Serah Vendor</th>
+                </tr>
+            `
+            },
+
+            isi_tujuan_ttd_lengkap: {
+                columns: ['No', 'Kode Buku', 'No. Cheque', 'BANK', 'Perusahaan', 'Pengisi', 'Tujuan',
+                    'TTD 1', 'TTD 2', 'Bank Tujuan', 'Tanggal Transfer'
+                ],
+                fields: ['kode_buku', 'no_cheque', 'bank', 'perusahaan', 'pengisi', 'tujuan', 'ttd1',
+                    'ttd2', 'bank_tujuan', 'tanggal_transfer'
+                ],
+                thead: `
+                <tr>
+                    <th>No.</th>
+                    <th>Kode Buku</th>
+                    <th>No. Cheque</th>
+                    <th>BANK</th>
+                    <th>Perusahaan</th>
+                    <th>Pengisi</th>
+                    <th>Tujuan</th>
+                    <th>TTD 1</th>
+                    <th>TTD 2</th>
+                    <th>Bank Tujuan</th>
+                    <th>Tanggal Transfer</th>
+                </tr>
+            `
+            },
+
+            isi_nominal: {
+                columns: ['No', 'Kode Buku', 'No. Cheque', 'BANK', 'Perusahaan', 'Nominal',
+                    'TTD 1', 'Penerima Metro', 'Tanggal Serah Metro'
+                ],
+                fields: ['kode_buku', 'no_cheque', 'bank', 'perusahaan', 'nominal', 'ttd1',
+                    'penerima_metro', 'tanggal_serah_metro'
+                ],
+                thead: `
+                <tr>
+                    <th>No.</th>
+                    <th>Kode Buku</th>
+                    <th>No. Cheque</th>
+                    <th>BANK</th>
+                    <th>Perusahaan</th>
+                    <th>Pengisi</th>
+                    <th>Nominal</th>
+                    <th>Penerima Metro</th>
+                    <th>Tanggal Serah Metro</th>
+                </tr>
+            `
+            },
+
+            batal: {
+                columns: ['No', 'Kode Buku', 'No. Cheque', 'BANK', 'Perusahaan', 'Pengisi', 'Nominal',
+                    'Alasan Batal', 'Tanggal Batal'
+                ],
+                fields: ['kode_buku', 'no_cheque', 'bank', 'perusahaan', 'pengisi', 'nominal',
+                    'alasan_batal', 'tanggal_batal'
+                ],
+                thead: `
+                <tr>
+                    <th>No.</th>
+                    <th>Kode Buku</th>
+                    <th>No. Cheque</th>
+                    <th>BANK</th>
+                    <th>Perusahaan</th>
+                    <th>Pengisi</th>
+                    <th>Nominal</th>
+                    <th>Alasan Batal</th>
+                    <th>Tanggal Batal</th>
+                </tr>
+            `
+            },
+
+            ttd1_only: {
+                columns: ['No', 'Kode Buku', 'No. Cheque', 'BANK', 'Perusahaan', 'Pengisi', 'TTD 1',
+                    'Tanggal TTD'
+                ],
+                fields: ['kode_buku', 'no_cheque', 'bank', 'perusahaan', 'pengisi', 'ttd1', 'tanggal_ttd'],
+                thead: `
+                <tr>
+                    <th>No.</th>
+                    <th>Kode Buku</th>
+                    <th>No. Cheque</th>
+                    <th>BANK</th>
+                    <th>Perusahaan</th>
+                    <th>Pengisi</th>
+                    <th>TTD 1</th>
+                    <th>Tanggal TTD</th>
+                </tr>
+            `
+            },
+
+            // Default template jika status tidak ditemukan
+            default: {
+                columns: ['No', 'Kode Buku', 'No. Cheque', 'BANK', 'Perusahaan', 'Status', 'Keterangan'],
+                fields: ['kode_buku', 'no_cheque', 'bank', 'perusahaan', 'status', 'keterangan'],
+                thead: `
+                <tr>
+                    <th>No.</th>
+                    <th>Kode Buku</th>
+                    <th>No. Cheque</th>
+                    <th>BANK</th>
+                    <th>Perusahaan</th>
+                    <th>Status</th>
+                    <th>Keterangan</th>
+                </tr>
+            `
+            }
+        };
 
         // Initialize module
-        init: function () {
-            this.bindEvents();
+        function init() {
+            bindEvents();
             console.log('Cheque Status Module initialized');
-        },
+        }
 
         // Bind all event listeners
-        bindEvents: function () {
-            const self = this;
-
+        function bindEvents() {
             // Status card click events
-            $('.status-card').on('click', function () {
+            $(document).on('click', '.status-card', function () {
                 const status = $(this).data('status');
                 const title = $(this).data('title');
-                self.openModal(status, title);
+                openModal(status, title);
             });
 
             // Modal filter events
             $('#modalItemsPerPage').on('change', function () {
-                self.config.itemsPerPage = parseInt($(this).val());
-                self.config.currentPage = 1;
-                self.renderModalTable();
+                config.itemsPerPage = parseInt($(this).val());
+                config.currentPage = 1;
+                renderModalTable();
             });
 
             // Modal search with debounce
-            let searchTimeout;
             $('#modalSearchInput').on('keyup', function () {
-                clearTimeout(searchTimeout);
-                searchTimeout = setTimeout(function () {
-                    self.config.searchTerm = $('#modalSearchInput').val().trim();
-                    self.config.currentPage = 1;
-                    self.renderModalTable();
+                clearTimeout(config.debounceTimer);
+                config.debounceTimer = setTimeout(function () {
+                    config.searchTerm = $('#modalSearchInput').val().trim();
+                    config.currentPage = 1;
+                    renderModalTable();
                 }, 500);
             });
 
             // Export button
-            $('#btnExport').on('click', function () {
-                self.exportData();
-            });
-        },
+            $('#btnExport').on('click', exportData);
+        }
 
         // Open modal with status details
-        openModal: function (status, title) {
-            this.config.currentStatus = status;
-            this.config.currentPage = 1;
-            this.config.searchTerm = '';
+        function openModal(status, title) {
+            config.currentStatus = status;
+            config.currentTitle = title;
+            config.currentPage = 1;
+            config.searchTerm = '';
 
             // Set modal title
             $('#modalStatusTitle').text(title);
@@ -475,122 +861,129 @@
             $('#modalDetailCheque').modal('show');
 
             // Render initial table
-            this.renderModalTable();
-        },
+            renderModalTable();
+        }
 
         // Generate mock data for demo
-        generateMockData: function (count) {
+        function generateMockData(count = 15) {
             const data = [];
-            const vendors = ['PT. Abadi Jaya', 'CV. Sejahtera', 'UD. Makmur', 'PT. Sumber Rejeki',
-                'CV. Berkah'
-            ];
-            const banks = ['BCA', 'BRI', 'Mandiri', 'BNI', 'BTN'];
-
             for (let i = 1; i <= count; i++) {
                 data.push({
-                    no_cheque: 'CHQ-' + (1000 + i),
-                    vendor: vendors[Math.floor(Math.random() * vendors.length)],
-                    nominal: Math.floor(Math.random() * 10000000) + 1000000,
-                    bank: banks[Math.floor(Math.random() * banks.length)],
-                    tanggal: '2024-01-' + (i < 10 ? '0' + i : i)
+                    kode_buku: `BK${String(i).padStart(3, '0')}`,
+                    no_cheque: `CHQ${String(i).padStart(5, '0')}`,
+                    bank: ['BCA', 'Mandiri', 'BNI', 'BRI'][Math.floor(Math.random() * 4)],
+                    perusahaan: ['PT ABC', 'PT XYZ', 'CV Indah', 'UD Jaya'][Math.floor(Math.random() *
+                        4)],
+                    pengisi: ['John Doe', 'Jane Smith', 'Robert Johnson'][Math.floor(Math.random() *
+                        3)],
+                    tujuan: ['Pembayaran Vendor', 'Gaji Karyawan', 'Pembelian Barang'][Math.floor(Math
+                        .random() * 3)],
+                    nominal: Math.floor(Math.random() * 100000000) + 1000000,
+                    ttd1: ['Direktur', 'Manager'][Math.floor(Math.random() * 2)],
+                    ttd2: ['Finance Manager', 'CEO'][Math.floor(Math.random() * 2)],
+                    ttd: ['TTD 1', 'TTD 2'][Math.floor(Math.random() * 2)],
+                    penerima_bank: ['Staff Finance', 'Admin'][Math.floor(Math.random() * 2)],
+                    pemegang_buku: ['Bagian Keuangan', 'Admin'][Math.floor(Math.random() * 2)],
+                    // Additional fields
+                    tanggal_serah: new Date().toLocaleDateString('id-ID'),
+                    tanggal_ttd: new Date().toLocaleDateString('id-ID'),
+                    alasan_batal: 'Cheque rusak/tdk layak',
+                    status_lengkap: 'Lengkap',
+                    vendor: 'Vendor ABC',
+                    tanggal_serah_vendor: new Date().toLocaleDateString('id-ID'),
+                    bank_tujuan: 'Bank Mandiri',
+                    tanggal_transfer: new Date().toLocaleDateString('id-ID'),
+                    penerima_metro: 'Staff Metro',
+                    tanggal_serah_metro: new Date().toLocaleDateString('id-ID'),
+                    tanggal_batal: new Date().toLocaleDateString('id-ID'),
+                    keterangan: 'Cheque untuk pembayaran rutin',
+                    status: 'Pending'
+                });
+            }
+            return data;
+        }
+
+        // Render table in modal
+        function renderModalTable() {
+            const template = tableTemplates[config.currentStatus] || tableTemplates.default;
+            const allData = generateMockData(25);
+
+            // Filter data
+            let filteredData = allData;
+            if (config.searchTerm) {
+                const term = config.searchTerm.toLowerCase();
+                filteredData = allData.filter(item => {
+                    return template.fields.some(field => {
+                        const value = item[field] || '';
+                        return value.toString().toLowerCase().includes(term);
+                    });
                 });
             }
 
-            return data;
-        },
-
-        // Render table in modal
-        renderModalTable: function () {
-            // Generate mock data (15 items for demo)
-            const allData = this.generateMockData(15);
-
-            // Apply search filter
-            let filteredData = allData;
-            if (this.config.searchTerm) {
-                const term = this.config.searchTerm.toLowerCase();
-                filteredData = allData.filter(item =>
-                    item.no_cheque.toLowerCase().includes(term) ||
-                    item.vendor.toLowerCase().includes(term) ||
-                    item.bank.toLowerCase().includes(term)
-                );
-            }
-
-            // Calculate pagination
+            // Pagination calculations
             const totalItems = filteredData.length;
-            const totalPages = Math.ceil(totalItems / this.config.itemsPerPage);
+            const totalPages = Math.ceil(totalItems / config.itemsPerPage);
 
-            // Adjust current page if needed
-            if (this.config.currentPage > totalPages && totalPages > 0) {
-                this.config.currentPage = totalPages;
+            if (config.currentPage > totalPages && totalPages > 0) {
+                config.currentPage = totalPages;
             }
 
-            // Update pagination info
             $('#modalTotalData').text(totalItems);
 
-            if (totalItems === 0) {
-                this.renderEmptyTable();
-                this.renderPagination(totalPages);
-                return;
-            }
+            // Slice data for current page
+            const startIndex = (config.currentPage - 1) * config.itemsPerPage;
+            const endIndex = Math.min(startIndex + config.itemsPerPage, totalItems);
+            $('#modalPageStart').text(totalItems === 0 ? '0' : startIndex + 1);
+            $('#modalPageEnd').text(totalItems === 0 ? '0' : endIndex);
 
-            // Calculate slice for current page
-            const startIndex = (this.config.currentPage - 1) * this.config.itemsPerPage;
-            const endIndex = Math.min(startIndex + this.config.itemsPerPage, totalItems);
+            // Render table
+            let tableHtml = `
+            <table class="table table-sm table-hover">
+                <thead>${template.thead}</thead>
+                <tbody id="modalChequeData">`;
 
-            // Update page info
-            $('#modalPageStart').text(startIndex + 1);
-            $('#modalPageEnd').text(endIndex);
-
-            // Render table rows
-            let tableHtml = '';
             const pageData = filteredData.slice(startIndex, endIndex);
-
-            pageData.forEach((item, index) => {
-                const rowNum = startIndex + index + 1;
+            if (pageData.length === 0) {
                 tableHtml += `
                 <tr>
-                    <td class="text-center">${rowNum}</td>
-                    <td>${item.no_cheque}</td>
-                    <td>${item.vendor}</td>
-                    <td>${this.formatRupiah(item.nominal)}</td>
-                    <td>${item.bank}</td>
-                    <td>${item.tanggal}</td>
-                </tr>
-            `;
-            });
+                    <td colspan="${template.columns.length}" class="text-center py-4">
+                        <i class="fas fa-search fa-2x text-muted mb-3"></i>
+                        <p class="text-muted">
+                            ${config.searchTerm 
+                                ? 'Tidak ada data yang sesuai dengan pencarian' 
+                                : 'Tidak ada data cheque untuk status ini'}
+                        </p>
+                    </td>
+                </tr>`;
+            } else {
+                pageData.forEach((item, index) => {
+                    tableHtml += `<tr><td class="text-center">${startIndex + index + 1}</td>`;
+                    template.fields.forEach(field => {
+                        let value = item[field] || '';
+                        // Format nominal jika kolom nominal
+                        if (field === 'nominal' && value) {
+                            value = formatRupiah(value);
+                        }
+                        tableHtml += `<td>${value}</td>`;
+                    });
+                    tableHtml += `</tr>`;
+                });
+            }
 
-            $('#modalChequeData').html(tableHtml);
-            this.renderPagination(totalPages);
-        },
-
-        // Render empty table state
-        renderEmptyTable: function () {
-            const message = this.config.searchTerm ?
-                'Tidak ada data yang sesuai dengan pencarian' :
-                'Tidak ada data cheque untuk status ini';
-
-            $('#modalChequeData').html(`
-            <tr>
-                <td colspan="6" class="text-center py-4">
-                    <i class="fas fa-search fa-2x text-muted mb-3"></i>
-                    <p class="text-muted">${message}</p>
-                </td>
-            </tr>
-        `);
-
-            $('#modalPageStart').text('0');
-            $('#modalPageEnd').text('0');
-        },
+            tableHtml += `</tbody></table>`;
+            $('#modalTableContainer').html(tableHtml);
+            renderPagination(totalPages);
+        }
 
         // Render pagination controls
-        renderPagination: function (totalPages) {
+        function renderPagination(totalPages) {
             if (totalPages <= 1) {
                 $('#modalPagination').html('');
                 return;
             }
 
             let paginationHtml = '';
-            const current = this.config.currentPage;
+            const current = config.currentPage;
 
             // Previous button
             paginationHtml += `
@@ -605,7 +998,6 @@
             let startPage = Math.max(1, current - 2);
             let endPage = Math.min(totalPages, startPage + 4);
 
-            // Adjust start if near end
             if (endPage - startPage < 4) {
                 startPage = Math.max(1, endPage - 4);
             }
@@ -628,51 +1020,76 @@
         `;
 
             $('#modalPagination').html(paginationHtml);
-        },
+        }
 
         // Change page in modal
-        changePage: function (page) {
-            if (page < 1 || page > Math.ceil($('#modalTotalData').text() / this.config.itemsPerPage)) {
+        function changePage(page) {
+            if (page < 1 || page > Math.ceil($('#modalTotalData').text() / config.itemsPerPage)) {
                 return;
             }
 
-            this.config.currentPage = page;
-            this.renderModalTable();
+            config.currentPage = page;
+            renderModalTable();
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
             });
-        },
+        }
 
         // Export data function
-        exportData: function () {
-            const status = this.config.currentStatus;
-            const title = $('#modalStatusTitle').text();
+        function exportData() {
+            const status = config.currentStatus;
+            const title = config.currentTitle;
 
-            alert(
-                `Export data untuk: ${title}\nStatus: ${status}\n\nFitur export akan diimplementasikan sesuai kebutuhan.`
-            );
-
-            // Implementasi export bisa berupa:
-            // 1. Download CSV
-            // 2. Print
-            // 3. Export ke Excel
-            // 4. PDF Report
-        },
+            Swal.fire({
+                title: 'Export Data',
+                html: `Export data untuk:<br><strong>${title}</strong><br><br>Status: <strong>${status}</strong>`,
+                icon: 'info',
+                showCancelButton: true,
+                confirmButtonText: 'Download Excel',
+                cancelButtonText: 'Batal'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Simulate export
+                    Swal.fire({
+                        title: 'Menyiapkan File...',
+                        text: 'Sedang mengeksport data ke Excel',
+                        allowOutsideClick: false,
+                        didOpen: () => {
+                            Swal.showLoading();
+                            setTimeout(() => {
+                                Swal.fire(
+                                    'Berhasil!',
+                                    'File Excel telah siap didownload',
+                                    'success'
+                                );
+                            }, 1500);
+                        }
+                    });
+                }
+            });
+        }
 
         // Format currency to Rupiah
-        formatRupiah: function (angka) {
+        function formatRupiah(angka) {
             if (!angka) return 'Rp 0';
             return 'Rp ' + angka.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
         }
-    };
+
+        // Public API
+        return {
+            init: init,
+            changePage: changePage,
+            openModal: openModal
+        };
+    })();
 
     // Initialize when document is ready
     $(document).ready(function () {
         ChequeModule.init();
     });
 
-    // Global refresh function (if needed)
+    // Global refresh function
     window.refreshChequeStatus = function () {
         alert('Refresh data cheque...');
         // Implement API call here if needed
